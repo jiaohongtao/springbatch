@@ -1,0 +1,17 @@
+spring:
+  # batch
+  batch:
+    job:
+      # 默认自动执行定义的Job(true)，改为false，需要jobLaucher.run执行
+      enabled: false
+    # spring batch在数据库里面创建默认的数据表，如果不是always则会提示相关表不存在
+    jdbc:
+      initialize-schema: always
+    # 设置batch表的前缀
+    #  table-prefix: csv-batch
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.1.3.24:3306/jiaobk001?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 123456
